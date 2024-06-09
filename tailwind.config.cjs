@@ -2,7 +2,7 @@
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   presets: [],
-  darkMode: 'media', // or 'class'
+  darkMode: 'class',
   theme: {
     screens: {
       sm: '640px',
@@ -22,8 +22,8 @@ module.exports = {
       white: colors.white,
       slate: colors.slate,
       gray: {
-        50: "#FAFAFC",
-        100: "#E9E9EC",
+        50: "#F3F4F6",
+        100: "#E9E9ED",
         200: "#C6C8CD",
         300: "#ACAEB6",
         400: "#92959F",
@@ -362,6 +362,8 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        'DM Sans',
+        'sans-serif',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',

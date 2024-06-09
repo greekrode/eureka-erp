@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-gray {
+	@apply brightness-50 contrast-200 grayscale invert filter;
+}
+
+.normal-gray {
+	@apply brightness-75 contrast-200 grayscale;
+}
