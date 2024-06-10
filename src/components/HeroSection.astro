@@ -1,6 +1,20 @@
 ---
 import Container from './Container.astro'
-import '../styles/custom.css'
+import { Image } from 'astro:assets'
+import headerImage from '../../public/images/header.png'
+import bmvImage from '../../public/images/clients/bmv.png'
+import wcmImage from '../../public/images/clients/wcm.png'
+import sjmtImage from '../../public/images/clients/sjmt.png'
+import kjcImage from '../../public/images/clients/kjc.png'
+import mlImage from '../../public/images/clients/ml.png'
+
+const clients = [
+	{ src: bmvImage, alt: 'Boss Vape', class: 'normal-gray h-8 w-auto lg:h-36' },
+	{ src: wcmImage, alt: 'Wilson Chu Music', class: 'custom-gray h-8 w-auto lg:h-36' },
+	{ src: sjmtImage, alt: 'SJMT', class: 'custom-gray h-8 w-auto lg:h-36' },
+	{ src: kjcImage, alt: 'KJC', class: 'custom-gray h-8 w-auto lg:h-36' },
+	{ src: mlImage, alt: 'ML', class: 'normal-gray h-8 w-auto lg:h-28' }
+]
 ---
 
 <div class="relative" id="home">
@@ -20,7 +34,7 @@ import '../styles/custom.css'
 						<a href="#features" class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
 							<span class="relative text-base font-semibold text-white">Get started</span>
 						</a>
-						<a href="#" class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
+						<a href="#call" class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
 							<span class="relative text-base font-semibold text-primary">Learn more</span>
 						</a>
 					</div>
@@ -28,7 +42,7 @@ import '../styles/custom.css'
 
 				<div class="relative mt-20 md:mt-0 md:w-2/5 lg:w-3/5">
 					<div class="-ml-6 md:-mr-72 lg:mr-0">
-						<img class="h-full object-cover object-left dark:hidden" src="./images/header.png" alt="app screenshot" width="" height="" />
+						<Image class="h-full object-cover object-left dark:hidden" src={headerImage} alt="app screenshot" loading="eager" />
 					</div>
 				</div>
 			</div>
@@ -36,21 +50,13 @@ import '../styles/custom.css'
 			<div class="mt-8 text-center md:mt-32 lg:mt-20 xl:mt-16">
 				<span class="text-m font-bold tracking-wider text-gray-800 dark:text-white">TRUSTED BY OUR CLIENTS</span>
 				<div class="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-6 lg:gap-24">
-					<div class="flex w-full justify-center sm:w-auto">
-						<img class="normal-gray h-8 w-auto lg:h-36" src="images/clients/bmv.png" loading="lazy" alt="Boss Vape" width="" height="" />
-					</div>
-					<div class="flex w-full justify-center sm:w-auto">
-						<img class="custom-gray h-8 w-auto lg:h-36" src="images/clients/wcm.png" loading="lazy" alt="Wilson Chu Music" width="" height="" />
-					</div>
-					<div class="flex w-full justify-center sm:w-auto">
-						<img class="custom-gray h-8 w-auto lg:h-36" src="images/clients/sjmt.png" loading="lazy" alt="SJMT" width="" height="" />
-					</div>
-					<div class="flex w-full justify-center sm:w-auto">
-						<img class="custom-gray h-8 w-auto lg:h-36" src="images/clients/kjc.png" loading="lazy" alt="KJC" width="" height="" />
-					</div>
-					<div class="flex w-full justify-center sm:w-auto">
-						<img class="normal-gray h-8 w-auto lg:h-28" src="images/clients/ml.png" loading="lazy" alt="ML" width="" height="" />
-					</div>
+					{
+						clients.map((client) => (
+							<div class="flex w-full justify-center sm:w-auto">
+								<Image class={client.class} src={client.src} loading="eager" alt={client.alt} />
+							</div>
+						))
+					}
 				</div>
 			</div>
 		</div>

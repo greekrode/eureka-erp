@@ -9,3 +9,7 @@
 .normal-gray {
 	@apply brightness-75 contrast-200 grayscale;
 }
+
+.iti {
+	@apply w-full !important;
+}

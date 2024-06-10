@@ -1,23 +1,49 @@
 ---
 import Container from './Container.astro'
+import Contact from './Contact.astro'
 ---
 
-<div class="relative py-16">
+<div class="relative py-16" id="call">
 	<div aria-hidden="true" class="absolute inset-0 m-auto grid h-max w-full grid-cols-2 -space-x-52 opacity-40">
 		<div class="h-56 bg-gradient-to-br from-primary to-purple-400 blur-[106px]"></div>
 		<div class="h-32 bg-gradient-to-r from-cyan-400 to-sky-300 blur-[106px]"></div>
 	</div>
 	<Container>
-		<div class="relative">
+		<div>
+			<Contact />
 			<div class="m-auto mt-6 space-y-6 md:w-8/12 lg:w-7/12">
 				<h1 class="text-center text-4xl font-bold text-gray-800 md:text-5xl">Start managing your company smarter today</h1>
 				<p class="text-center text-xl text-gray-600">Be part of the people using our services.</p>
 				<div class="flex flex-wrap justify-center gap-6">
-					<a href="#" class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
+					<button id="contact-us-btn" class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
 						<span class="relative text-base font-semibold text-white">Contact Us</span>
-					</a>
+					</button>
 				</div>
 			</div>
 		</div>
 	</Container>
 </div>
+
+<script>
+	document.getElementById('contact-us-btn').addEventListener('click', function () {
+		const modal = document.getElementById('contact-modal')
+		modal.classList.remove('hidden')
+		setTimeout(() => {
+			modal.classList.add('opacity-100')
+			modal.classList.remove('opacity-0')
+		}, 10)
+		modal.classList.add('flex')
+	})
+
+	document.getElementById('contact-modal').addEventListener('click', function (event) {
+		const target = event.target as HTMLElement
+		if (target.id === 'contact-modal') {
+			const modal = document.getElementById('contact-modal')
+			modal.classList.add('opacity-0')
+			modal.classList.remove('opacity-100')
+			setTimeout(() => {
+				modal.classList.add('hidden')
+			}, 300)
+		}
+	})
+</script>
