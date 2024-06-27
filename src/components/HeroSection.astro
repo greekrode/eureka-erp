@@ -7,13 +7,15 @@ import wcmImage from '../../public/images/clients/wcm.png'
 import sjmtImage from '../../public/images/clients/sjmt.png'
 import kjcImage from '../../public/images/clients/kjc.png'
 import mlImage from '../../public/images/clients/ml.png'
+import vitImage from '../../public/images/clients/vit.png'
 
 const clients = [
 	{ src: bmvImage, alt: 'Boss Vape', class: 'normal-gray h-24 w-auto lg:h-36' },
 	{ src: wcmImage, alt: 'Wilson Chu Music', class: 'custom-gray h-24 w-auto lg:h-36' },
-	{ src: sjmtImage, alt: 'SJMT', class: 'custom-gray h-12 w-auto lg:h-36' },
-	{ src: kjcImage, alt: 'KJC', class: 'custom-gray h-12 w-auto lg:h-36' },
-	{ src: mlImage, alt: 'ML', class: 'normal-gray h-12 w-auto lg:h-28' }
+	{ src: sjmtImage, alt: 'Surya Jaya Muliatama', class: 'custom-gray h-12 w-auto lg:h-36' },
+	{ src: vitImage, alt: 'Vapor Indo Trimurti', class: 'normal-gray h-24 w-auto lg:h-72' },
+	{ src: kjcImage, alt: 'Karya Jaya Ciptatehnik', class: 'custom-gray h-12 w-auto lg:h-36' },
+	{ src: mlImage, alt: 'Musica Lumina', class: 'normal-gray h-12 w-auto lg:h-28' }
 ]
 ---
 
@@ -52,7 +54,7 @@ const clients = [
 				<div class="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-6 lg:gap-24">
 					{
 						clients.map((client) => (
-							<div class="flex w-full justify-center sm:w-auto">
+							<div class="flex justify-center sm:w-auto">
 								<Image class={client.class} src={client.src} loading="eager" alt={client.alt} />
 							</div>
 						))
