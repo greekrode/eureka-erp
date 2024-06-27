@@ -3,7 +3,8 @@ import { AstroFont } from 'astro-font'
 import '../styles/custom.css'
 import AppFooter from '../components/AppFooter.astro'
 import AppHeader from '../components/AppHeader.astro'
-import Contact from '../components/Contact.astro'
+// import Contact from '../components/Contact.astro'
+import Preloader from '../components/Preloader.astro'
 ---
 
 <!doctype html>
@@ -31,6 +32,7 @@ import Contact from '../components/Contact.astro'
 		/>
 	</head>
 	<body class="bg-white">
+		<Preloader />
 		<AppHeader />
 		<slot />
 		<AppFooter />
@@ -51,5 +53,14 @@ import Contact from '../components/Contact.astro'
 				margin: 0;
 			}
 		</style>
+
+		<script>
+			window.addEventListener('load', () => {
+				const preloader = document.getElementById('preloader')
+				if (preloader) {
+					preloader.style.display = 'none'
+				}
+			})
+		</script>
 	</body>
 </html>
