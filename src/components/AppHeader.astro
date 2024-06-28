@@ -17,46 +17,45 @@ const links = [
 ---
 
 <script>
-	let isToggled = false
-	const navlinks = document.querySelector('#navlinks')
-	const hamburger = document.querySelector('#hamburger')
-	const layer = document.querySelector('#navLayer')
-	const links = [...navlinks.querySelector('ul').children]
-	const nav = document.querySelector('nav')
+	document.addEventListener('DOMContentLoaded', () => {
+		let isToggled = false
+		const navlinks = document.querySelector('#navlinks')
+		const hamburger = document.querySelector('#hamburger')
+		const layer = document.querySelector('#navLayer')
+		const links = [...navlinks.querySelector('ul').children]
+		const nav = document.querySelector('nav')
 
-	function toggleNavlinks() {
-		if (isToggled) {
-			navlinks.classList.add('!visible', '!scale-100', '!opacity-100', '!lg:translate-y-0')
-			hamburger.classList.add('toggled')
-			layer.classList.add('origin-top', 'scale-y-100')
-		} else {
-			navlinks.classList.remove('!visible', '!scale-100', '!opacity-100', '!lg:translate-y-0')
-			hamburger.classList.remove('toggled')
-			layer.classList.remove('origin-top', 'scale-y-100')
+		function toggleNavlinks() {
+			if (isToggled) {
+				navlinks.classList.add('!visible', '!scale-100', '!opacity-100', '!lg:translate-y-0')
+				hamburger.classList.add('toggled')
+				layer.classList.add('origin-top', 'scale-y-100')
+			} else {
+				navlinks.classList.remove('!visible', '!scale-100', '!opacity-100', '!lg:translate-y-0')
+				hamburger.classList.remove('toggled')
+				layer.classList.remove('origin-top', 'scale-y-100')
+			}
 		}
-	}
-	hamburger.addEventListener('click', () => {
-		isToggled = !isToggled
-		toggleNavlinks()
-	})
 
-	links.forEach((link) => {
-		link.addEventListener('click', () => {
+		hamburger.addEventListener('click', () => {
 			isToggled = !isToggled
 			toggleNavlinks()
 		})
-	})
 
-	window.addEventListener('scroll', () => {
-		if (window.scrollY > 50) {
-			nav.classList.add('bg-white', 'transition-colors', 'duration-500')
-			nav.classList.add('border-gray-200', 'transition-colors', 'duration-500')
-			nav.classList.add('border-b', 'transition-colors', 'duration-500')
-		} else {
-			nav.classList.remove('bg-white', 'transition-colors', 'duration-500')
-			nav.classList.remove('border-gray-200', 'transition-colors', 'duration-500')
-			nav.classList.remove('border-b', 'transition-colors', 'duration-500')
-		}
+		links.forEach((link) => {
+			link.addEventListener('click', () => {
+				isToggled = !isToggled
+				toggleNavlinks()
+			})
+		})
+
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 50) {
+				nav.classList.add('bg-white', 'transition-colors', 'duration-500', 'border-gray-200', 'border-b')
+			} else {
+				nav.classList.remove('bg-white', 'transition-colors', 'duration-500', 'border-gray-200', 'border-b')
+			}
+		})
 	})
 </script>
 
