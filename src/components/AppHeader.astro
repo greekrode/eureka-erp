@@ -22,6 +22,7 @@ const links = [
 	const hamburger = document.querySelector('#hamburger')
 	const layer = document.querySelector('#navLayer')
 	const links = [...navlinks.querySelector('ul').children]
+	const nav = document.querySelector('nav')
 
 	function toggleNavlinks() {
 		if (isToggled) {
@@ -45,10 +46,22 @@ const links = [
 			toggleNavlinks()
 		})
 	})
+
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 50) {
+			nav.classList.add('bg-white', 'transition-colors', 'duration-500')
+			nav.classList.add('border-gray-200', 'transition-colors', 'duration-500')
+			nav.classList.add('border-b', 'transition-colors', 'duration-500')
+		} else {
+			nav.classList.remove('bg-white', 'transition-colors', 'duration-500')
+			nav.classList.remove('border-gray-200', 'transition-colors', 'duration-500')
+			nav.classList.remove('border-b', 'transition-colors', 'duration-500')
+		}
+	})
 </script>
 
 <header>
-	<nav class="absolute z-10 w-full">
+	<nav class="fixed start-0 top-0 z-20 w-full">
 		<Container>
 			<div class="relative flex flex-wrap items-center justify-between gap-6 py-3 md:gap-0 md:py-4">
 				<div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max">
@@ -92,7 +105,6 @@ const links = [
 		</Container>
 	</nav>
 </header>
-
 <style>
 	#toggle_nav:checked ~ div #hamburger #line {
 		@apply translate-y-1.5 rotate-45;

@@ -1,12 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-		'./node_modules/flowbite/**/*.js'
-	],
+    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+    './node_modules/flowbite/**/*.js'
+  ],
   presets: [],
   darkMode: 'class',
   theme: {
+    extend: {
+      keyframes: {
+        "shine-pulse": {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        }
+      },
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -970,6 +985,6 @@ module.exports = {
     'disabled',
   ],
   plugins: [
-		require('flowbite/plugin')
-	],
+    require('flowbite/plugin')
+  ],
 }

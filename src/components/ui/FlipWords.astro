@@ -1,0 +1,9 @@
+---
+import { FlipWordsComponent } from '@aceternityui/FlipWords'
+
+const words = ['boundaries', 'horizon', 'limit', 'expectation']
+const duration = 3000
+const className = 'custom-class'
+---
+
+<FlipWordsComponent words={words} duration={duration} className={className} client:only="react" />

@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 import vercelServerless from '@astrojs/vercel/serverless'
 import react from '@astrojs/react'
+import partytown from '@astrojs/partytown'
 
 import sitemap from '@astrojs/sitemap'
 
@@ -14,5 +15,14 @@ export default defineConfig({
 		}
 	}),
 	site: 'https://eureka-erp.com',
-	integrations: [tailwind(), react(), sitemap()]
+	integrations: [
+		tailwind(),
+		react(),
+		sitemap(),
+		partytown({
+			config: {
+				forward: ['dataLayer.push']
+			}
+		})
+	]
 })
