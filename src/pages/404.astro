@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Container from '../components/Container.astro'
+---
+
+<Layout title="Eureka - Page Not Found">
+	<main class="mb-40 space-y-40 text-center">
+		<div class="relative" id="home">
+			<div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40">
+				<div class="h-56 bg-gradient-to-br from-primary to-blue-400 blur-[106px]"></div>
+				<div class="h-32 bg-gradient-to-r from-cyan-400 to-sky-300 blur-[106px]"></div>
+			</div>
+			<Container>
+				<div class="relative mx-auto ml-auto pt-36 md:w-3/5">
+					<h1 class="text-center text-5xl font-black md:text-6xl xl:text-7xl">Oops! Page Not Found</h1>
+					<p class="mt-10 text-lg text-gray-600">It looks like the page you are looking for doesn't exist.</p>
+					<p class="text-lg text-gray-600">Here are some helpful links to get you back on track:</p>
+					<ul class="mt-4 list-inside list-disc">
+						<li><a href="/" class="text-blue-500 hover:underline">Home</a></li>
+						<li><a href="/#features" class="text-blue-500 hover:underline">Features</a></li>
+						<li><a href="/#solution" class="text-blue-500 hover:underline">Solution</a></li>
+						<li><a href="/#faqs" class="text-blue-500 hover:underline">FAQs</a></li>
+						<li><a href="https://eureka-erp.sg.larksuite.com/share/base/form/shrlgdDjlUlXmyAEDaoSgxcPPSc" target="_blank" rel="noopener,noreferrer" class="text-blue-500 hover:underline">Contact Us</a></li>
+					</ul>
+					<p class="mt-8 text-lg text-gray-600">If you need further assistance, feel free to <a href="https://eureka-erp.sg.larksuite.com/share/base/form/shrlgdDjlUlXmyAEDaoSgxcPPSc" target="_blank" rel="noopener,noreferrer" class="text-blue-500 hover:underline">contact us</a>.</p>
+				</div>
+			</Container>
+		</div>
+	</main>
+</Layout>

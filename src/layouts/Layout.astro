@@ -13,11 +13,11 @@ import Preloader from '../components/Preloader.astro'
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/images/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Template built with tailwindcss using Tailus blocks v2" />
+		<meta name="description" content="Eureka offers expert IT consulting, ERP solutions, digital transformation, and business automation services to drive efficiency and innovation. Partner with us for cutting-edge technology solutions tailored to your business needs." />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<script defer src="https://analytics.kangritel.com/script.js" data-website-id="8b38e65d-2416-4c65-8632-95c57c337795"></script>
 		<script async defer data-website-id="8b38e65d-2416-4c65-8632-95c57c337795" src="https://umami.kangritel.com/umami.js"></script>
-		<title>Eureka - Your IT Solution</title>
+		<title>Eureka - IT Consulting, ERP Solutions & Digital Transformation</title>
 		<AstroFont
 			config={[
 				{
@@ -31,6 +31,8 @@ import Preloader from '../components/Preloader.astro'
 				}
 			]}
 		/>
+		<link rel="preload" href="../styles/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+		<noscript><link rel="stylesheet" href="../styles/custom.css" /></noscript>
 	</head>
 	<body class="bg-white">
 		<Preloader />
@@ -38,7 +40,7 @@ import Preloader from '../components/Preloader.astro'
 		<slot />
 		<AppFooter />
 		<div class="fixed bottom-6 right-6 z-40 mx-auto hidden w-max md:block">
-			<button id="talk-to-us-now-btn" class="flex gap-3 rounded-2xl border border-yellow-900/30 bg-gradient-to-br from-white/50 to-yellow-100 p-3 shadow-2xl shadow-yellow-900/50 backdrop-blur-xl" onclick="window.open('https://eureka-erp.sg.larksuite.com/share/base/form/shrlgdDjlUlXmyAEDaoSgxcPPSc', '_blank')">
+			<button id="talk-to-us-now-btn" class="flex gap-3 rounded-2xl border border-yellow-900/30 bg-gradient-to-br from-white/50 to-yellow-100 p-3 shadow-2xl shadow-yellow-900/50 backdrop-blur-xl" onclick="window.open('https://eureka-erp.sg.larksuite.com/share/base/form/shrlgdDjlUlXmyAEDaoSgxcPPSc', '_blank', 'noopener,noreferrer')">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 text-yellow-600">
 					<path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd"></path>
 				</svg>
@@ -63,6 +65,6 @@ import Preloader from '../components/Preloader.astro'
 				}
 			})
 		</script>
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js" defer></script>
 	</body>
 </html>

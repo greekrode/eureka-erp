@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https//eureka-erp.com/sitemap-index.xml
+Sitemap: https://eureka-erp.com/sitemap-index.xml
