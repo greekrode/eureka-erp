@@ -2,9 +2,8 @@ import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 import vercelServerless from '@astrojs/vercel/serverless'
 import react from '@astrojs/react'
-import partytown from '@astrojs/partytown'
-
 import sitemap from '@astrojs/sitemap'
+import { shield } from '@kindspells/astro-shield'
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,14 +14,5 @@ export default defineConfig({
 		}
 	}),
 	site: 'https://eureka-erp.com',
-	integrations: [
-		tailwind(),
-		react(),
-		sitemap(),
-		partytown({
-			config: {
-				forward: ['dataLayer.push']
-			}
-		})
-	]
+	integrations: [tailwind(), react(), sitemap(), shield({})]
 })
