@@ -13,6 +13,6 @@ export default defineConfig({
 			enabled: true
 		}
 	}),
-	site: 'https://eureka-erp.com',
+	site: 'https://www.eureka-erp.com',
 	integrations: [tailwind(), react(), sitemap(), shield({})]
 })
