@@ -1,0 +1,6 @@
+---
+const { url } = Astro.request
+const canonicalUrl = new URL(url, Astro.site)
+---
+
+<link rel="canonical" href={canonicalUrl.toString()} />

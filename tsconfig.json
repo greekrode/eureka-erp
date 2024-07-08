@@ -8,6 +8,9 @@
       "@/*": [
         "src/*"
       ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
       "@components/*": [
         "src/components/*"
       ],

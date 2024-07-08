@@ -1,9 +1,10 @@
 ---
 import { AstroFont } from 'astro-font'
-import '../styles/custom.css'
-import AppFooter from '../components/AppFooter.astro'
-import AppHeader from '../components/AppHeader.astro'
-import Preloader from '../components/Preloader.astro'
+import '@styles/custom.css'
+import AppFooter from '@components/AppFooter.astro'
+import AppHeader from '@components/AppHeader.astro'
+import Preloader from '@components/Preloader.astro'
+import CanonicalTag from '@components/CanonicalTag.astro'
 ---
 
 <!doctype html>
@@ -18,6 +19,7 @@ import Preloader from '../components/Preloader.astro'
 		<script defer src="https://analytics.kangritel.com/script.js" data-website-id="8b38e65d-2416-4c65-8632-95c57c337795"></script>
 		<script async defer data-website-id="8b38e65d-2416-4c65-8632-95c57c337795" src="https://umami.kangritel.com/umami.js"></script>
 		<title>Eureka - IT Consulting, ERP Solutions & Digital Transformation</title>
+		<CanonicalTag />
 		<AstroFont
 			config={[
 				{
