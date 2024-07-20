@@ -1,13 +1,15 @@
 ---
 import Container from './Container.astro'
 import WobbleCard from '@ui/WobbleCard.astro'
+import { Image } from 'astro:assets'
+import milestoneIllustration from '../../public/images/milestone.svg'
 ---
 
 <div id="solution">
 	<Container>
 		<div class="flex-row-reverse items-center justify-between space-y-12 text-gray-600 md:flex md:gap-6 lg:gap-12 lg:space-y-0">
 			<div class="relative ml-auto h-full md:w-1/2">
-				<!-- <img src="./images/milestone.webp" alt="app milestone" width="1174" height="1134" /> -->
+				<Image src={milestoneIllustration} alt="Milestone" width="1174" height="1134" loading="lazy" />
 			</div>
 
 			<div class="md:w-1/2 lg:w-[47%]">
