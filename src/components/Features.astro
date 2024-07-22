@@ -4,6 +4,8 @@ import { Image } from 'astro:assets'
 import ShineBorder from '@ui/ShineBorderUI.astro'
 import scalabilityIcon from '../../public/images/icons/scalability.svg'
 import supportIcon from '../../public/images/icons/support.svg'
+import speedIcon from '../../public/images/icons/speed.svg'
+import securityIcon from '../../public/images/icons/security.svg'
 import userCenteredIllustration from '../../public/images/icons/user-centered.svg'
 ---
 
@@ -34,9 +36,7 @@ import userCenteredIllustration from '../../public/images/icons/user-centered.sv
 					<div class="relative grid overflow-hidden rounded-[1.25rem] bg-gray-100 p-1 sm:grid-cols-2">
 						<div class="flex flex-col gap-6 rounded-2xl p-8 transition duration-300 hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10">
 							<div class="flex h-10 w-10 rounded border border-gray-200">
-								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto h-6 w-6 text-gray-700">
-									<path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"></path>
-								</svg>
+								<Image src={securityIcon} alt="Scurity" class="m-auto h-6 w-6 text-gray-700" />
 							</div>
 							<div>
 								<h2 class="text-xl font-semibold text-gray-900">Security first</h2>
@@ -56,9 +56,7 @@ import userCenteredIllustration from '../../public/images/icons/user-centered.sv
 
 						<div class="flex flex-col gap-6 rounded-2xl p-8 transition duration-300 hover:bg-white hover:shadow-2xl hover:shadow-gray-600/10">
 							<div class="flex h-10 w-10 rounded border border-gray-200">
-								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto h-6 w-6 text-gray-700">
-									<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
-								</svg>
+								<Image src={speedIcon} alt="Fast Speed" class="m-auto h-6 w-6 text-gray-700" />
 							</div>
 							<div>
 								<h2 class="text-xl font-semibold text-gray-900">Fast speed</h2>
