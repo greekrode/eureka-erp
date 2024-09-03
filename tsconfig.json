@@ -4,6 +4,10 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "baseUrl": ".",
+    "types": [
+      "@astrojs/vercel/serverless",
+      "@astrojs/react"
+    ],
     "paths": {
       "@/*": [
         "src/*"

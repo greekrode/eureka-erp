@@ -8,7 +8,6 @@ import sjmtImage from '../../public/images/clients/sjmt.png'
 import kjcImage from '../../public/images/clients/kjc.png'
 import mlImage from '../../public/images/clients/ml.png'
 import vitImage from '../../public/images/clients/vit.png'
-import FlipWords from '@ui/FlipWords.astro'
 
 const clients = [
 	{ src: bmvImage, alt: 'Boss Vape', class: 'normal-gray h-24 w-auto lg:h-36' },
@@ -47,7 +46,7 @@ const clients = [
 
 				<div class="relative mt-20 md:mt-0 md:w-2/5 lg:w-3/5">
 					<div class="-ml-6 md:-mr-72 lg:mr-0">
-						<Image class="h-full object-cover object-left" src={headerImage} alt="app screenshot" loading="eager" />
+						<Image src={headerImage} widths={[400, 800, 1200]} sizes="(max-width: 767px) 100vw, (max-width: 1023px) 40vw, 60vw" alt="App screenshot" class="h-full w-full object-cover object-left" loading="eager" decoding="async" fetchpriority="high" />
 					</div>
 				</div>
 			</div>
