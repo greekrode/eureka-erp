@@ -8,11 +8,6 @@ import { shield } from '@kindspells/astro-shield'
 // https://astro.build/config
 export default defineConfig({
 	output: 'static',
-	adapter: vercelServerless({
-		webAnalytics: {
-			enabled: true
-		}
-	}),
 	image: {
 		service: {
 			entrypoint: 'astro/assets/services/sharp'
